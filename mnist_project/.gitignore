@@ -1,0 +1,16 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual Environment
+venv/
+ENV/
+
+# MNIST data (can be downloaded by script)
+/src/data/MNIST/raw/
+
+# Potentially sensitive files
+.env

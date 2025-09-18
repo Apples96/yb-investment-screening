@@ -1,0 +1,8 @@
+torch
+torchvision
+streamlit
+streamlit-drawable-canvas
+psycopg2
+Pillow
+python-dotenv
+pandas
