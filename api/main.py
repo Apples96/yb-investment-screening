@@ -191,6 +191,18 @@ async def serve_logo():
     except FileNotFoundError:
         raise HTTPException(status_code=404, detail="Logo not found")
 
+@app.get("/ybak-logo.png", tags=["Static"])
+async def serve_ybak_logo():
+    """
+    Serve the YBAK logo image.
+    """
+    try:
+        with open("ybak-logo.png", "rb") as f:
+            image_data = f.read()
+        return Response(content=image_data, media_type="image/png")
+    except FileNotFoundError:
+        raise HTTPException(status_code=404, detail="YBAK logo not found")
+
 @app.get("/health", tags=["Health"]) 
 async def health_check():
     """
